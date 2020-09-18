@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@codehaven/ngx-polylist": [
+        "dist/codehaven/ngx-polylist/codehaven-ngx-polylist",
+        "dist/codehaven/ngx-polylist"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
