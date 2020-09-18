@@ -1,20 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ListItem } from 'projects/codehaven/ngx-polylist/src/lib/base-list-item';
+import { ListConfig } from 'projects/codehaven/ngx-polylist/src/lib/list-config';
+
+const defaultListConfig: ListConfig = {
+  width: '100%',
+  height: '100%',
+  showScrollbar: false
+};
 
 @Component({
-  selector: 'lib-ngx-polylist',
-  template: `
-    <p>
-      ngx-polylist works!
-    </p>
-  `,
-  styles: [
-  ]
+  selector: 'ch-polylist',
+  templateUrl: './ngx-polylist.component.html',
+  styleUrls: ['./ngx-polylist.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgxPolylistComponent implements OnInit {
+export class NgxPolylistComponent {
 
-  constructor() { }
+  @Input() items: ListItem[];
+  @Input() mode: 'horizontal' | 'vertical' = 'vertical';
+  @Input() config?: ListConfig = defaultListConfig;
 
-  ngOnInit(): void {
+  constructor() {
   }
 
 }

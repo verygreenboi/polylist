@@ -1,9 +1,20 @@
 {
   "name": "@codehaven/ngx-polylist",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Polymorphic list for Angular",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/verygreenboi/polylist.git"
+  },
+  "keywords": [
+    "angular",
+    "lists"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^9.1.12",
-    "@angular/core": "^9.1.12"
+    "@angular/core": "^9.1.12",
+    "@tinkoff/ng-polymorpheus": "^2.1.0"
   },
   "dependencies": {
     "tslib": "^1.10.0"

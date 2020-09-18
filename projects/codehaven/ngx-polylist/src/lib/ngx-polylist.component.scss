@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+
+  .list-wrap {
+    .horizontal {
+      flex-direction: row;
+    }
+    .vertical {
+      flex-direction: column;
+    }
+  }
+}
