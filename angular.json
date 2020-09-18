@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "@codehaven/ngx-polylist": {
+      "projectType": "library",
+      "root": "projects/codehaven/ngx-polylist",
+      "sourceRoot": "projects/codehaven/ngx-polylist/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/codehaven/ngx-polylist/tsconfig.lib.json",
+            "project": "projects/codehaven/ngx-polylist/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/codehaven/ngx-polylist/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/codehaven/ngx-polylist/src/test.ts",
+            "tsConfig": "projects/codehaven/ngx-polylist/tsconfig.spec.json",
+            "karmaConfig": "projects/codehaven/ngx-polylist/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/codehaven/ngx-polylist/tsconfig.lib.json",
+              "projects/codehaven/ngx-polylist/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "polylist"
 }

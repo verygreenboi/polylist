@@ -1,0 +1,18 @@
+<ng-template #emptyRef>
+  <ng-content select="#empty"></ng-content>
+</ng-template>
+<ng-template #loading>
+  <ng-content select="#loading"></ng-content>
+</ng-template>
+
+<div
+  [ngClass]="{'horizontal': mode === 'horizontal', 'vertical': mode === 'vertical', 'ch-scrollbar': config.showScrollbar}"
+  [ngStyle]="{width: config?.width, height: config?.height, minHeight: config?.minHeight, minWidth: config?.minWidth}"
+  class="list-wrap">
+  <ng-container *ngIf="items as listItems; else loading">
+    <ng-container *ngIf="listItems.length > 0; else emptyRef">
+      <div *ngFor="let item of listItems" [content]="item.component" [context]="item.context" class="ch-item"
+           polymorpheus-outlet></div>
+    </ng-container>
+  </ng-container>
+</div>
