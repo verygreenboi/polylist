@@ -1,6 +1,6 @@
 {
   "name": "@codehaven/ngx-polylist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Polymorphic list for Angular",
   "repository": {
     "type": "git",

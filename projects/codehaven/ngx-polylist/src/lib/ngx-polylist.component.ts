@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { ListItem } from 'projects/codehaven/ngx-polylist/src/lib/base-list-item';
-import { ListConfig } from 'projects/codehaven/ngx-polylist/src/lib/list-config';
+import { ListItem } from './base-list-item';
+import { ListConfig } from './list-config';
 
 const defaultListConfig: ListConfig = {
   width: '100%',
